@@ -14,9 +14,11 @@
 ```
 
 
-ファビコン(favorite icon)ブラウザのアドレスバーやタブに表示される小さいアイコン
+## ファビコン(favorite icon)ブラウザのアドレスバーやタブに表示される小さいアイコン
 
+```html
 <link rel="shortcut icon" href="画像.img">
+```
 
 <form action="phpやrubyの送信先" method="get / post">
 
