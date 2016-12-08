@@ -1,15 +1,22 @@
-cssリンク順番の覚え方：
-	Love and Hate
-		a:link
-		a:visited
-		a:hover
-		a:active
+## cssリンク順番の覚え方：
 
+- Love and Hate
+  + a:link
+  + a:visited
+  + a:hover
+  + a:active
+
+
+## 別ページとしてリンクを開く
+
+```html
 <a href="###" target="_blank>：
-	別ページとしてリンクを開く
+```
+
+
+ファビコン(favorite icon)ブラウザのアドレスバーやタブに表示される小さいアイコン
 
 <link rel="shortcut icon" href="画像.img">
-	ファビコン(favorite icon)ブラウザのアドレスバーやタブに表示される小さいアイコン
 
 <form action="phpやrubyの送信先" method="get / post">
 
