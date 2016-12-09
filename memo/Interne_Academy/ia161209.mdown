@@ -1,0 +1,160 @@
+### 12/09 Internet Academy 作品製作7,8
+
+## 学んだこと
+
+# 作品製作７　テンプレート
+* テンプレート作成
+  - CMS (contents management system) PHP Perl Js を用いる
+  - Dreamweaver Template .dwt
+    1. テンプレートとして保存
+    2. dwtファイル [挿入]->[編集可能領域]
+  - IA講師の方
+    コピペ
+    デザインの変更の時のみDreamweaver
+
+* タイトル SEO対策
+  - 違うタイトルをつけること
+
+* 実態参照
+  - < &lt;
+  - > &gt;
+  - & &amp;
+  - " &quot;
+
+＃作品製作８　ソースコードの検証
+* Validator
+  - Dreamweaver
+  - W3C Markup Validation Service [html](https://validator.w3.org) 
+  - W3C CSS Validation Service [CSS]()
+
+* 開発者ツール
+  - Firefox
+    + 開発ツール (デフォルト)
+    + firebug (アドオン)
+
+* 中央配置
+  - ボックスの中央配置
+    ~~~
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    ~~~
+  - テキスト
+    ~~~
+    text-align:center;
+    ~~~
+
+*リンクの下線を消す
+  ~~~
+  a{text-decoration: none;}
+
+*floatを用いた時、親要素が潰れてしまう
+  解決策 -> 親要素に overflow:hidden;
+
+*公開前のチェック
+  - 文法のチェック
+    + バリデータ
+  - リンクチェック
+    + Dreamweaver
+  - 文章の間違いチェック
+    + Word
+  - ブラウザのチェック
+    + IE,Firefox,Chrome,Opera
+
+*HTML5
+  -セマンティクスの強化
+    +header
+    +footer
+    +section
+    +nav
+      google nav
+      パンくず nav
+    +article
+    +aside
+
+*未対応ブラウザへの対策
+  - JavaScriptによって要素を生成する
+  - CSSで新しい要素の見た目を設定する
+
+# スマートフォンサイト製作１
+*パソコンとスマホ
+  +パソコン
+    -ディスプレイ14インチ
+    -画面解像度 1360px 768px
+    -ポインティングデバイス
+  +スマホ
+    -ディスプレイ5インチ
+    -画面解像度　750px 1334px
+    -タッチ等
+    -HTML5,CSS3 JQuery MobileなどMobile用フレームワーク（古いブラウザへの対応がいらない）
+    -Flash は使用できない
+
+*viewport
+  ブラウザの表示領域
+~~~
+<meta name="viewport" content="width=device-width,user-scalable=no">
+~~~
+  - viewportの幅をデバイスの幅へ
+  - ユーザーによる拡大縮小の可否
+
+*Webサイトのスマホ対応
+  - 部分的な変更
+    通信速度遅い
+  - MediaQueries 同じ HTMLは同じ
+    W3C勧告
+    レスポンシブWebデザイン
+  - 専用サイトの作成
+
+*モバイルファースト
+  モバイル環境での閲覧を優先してサイトを設計する手法
+  あとからパソコンユーザー向け
+
+*ブレイクポイント
+  +スマホ縦
+    -480px
+  +スマホ横
+    -768px
+  +タブレット縦
+    -960px
+  +タブレット横・パソコン
+
+*ワイヤーフレーム
+  - first display : はじめに見える画面
+
+# スマートフォンサイト製作２
+*
+  -Media Types 媒体型のみ選ぶ　screen or print
+  -Media Queries
+    media="only screen and (min-width:768px) and (max-width:959px)"
+
+*未対応のブラウザへの対応
+  -Respond.js
+  -IE条件付きコメント
+  -HTML5新要素をDOMScriptで生成
+  -CSS3 PIE
+    1.PIE.htcというファイルを専用サイト
+
+*表示・非表示
+1.display:none;　幅のところはつまる
+2.visibility:hidden; 幅はそのまま確保される
+
+*クリアフィックス・・・回り込みの解除
+  .cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  }
+
+## Phiさんに聞きたいこと
+* header footer 等テンプレートどうしてますか？
+* スマホ対応はレスポンシブ? MediaQueries?
+
+
+
+
+
+
+
+

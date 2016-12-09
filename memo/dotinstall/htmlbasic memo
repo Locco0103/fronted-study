@@ -1,24 +1,17 @@
-## cssリンク順番の覚え方：
+#htmlbasic memo
 
-- Love and Hate
-  + a:link
-  + a:visited
-  + a:hover
-  + a:active
+cssリンク順番の覚え方：
+	Love and Hate
+		a:link
+		a:visited
+		a:hover
+		a:active
 
-
-## 別ページとしてリンクを開く
-
-```html
 <a href="###" target="_blank>：
-```
+	別ページとしてリンクを開く
 
-
-## ファビコン(favorite icon)ブラウザのアドレスバーやタブに表示される小さいアイコン
-
-```html
 <link rel="shortcut icon" href="画像.img">
-```
+	ファビコン(favorite icon)ブラウザのアドレスバーやタブに表示される小さいアイコン
 
 <form action="phpやrubyの送信先" method="get / post">
 
@@ -29,6 +22,7 @@ inputでよく使われる属性(type="") 閉じタグいらない:
 		maxlength	- 最大文字数
 		value		- はじめから表示されるテキスト
 		placeholder	- うっすらとはじめから表示されるテキスト
+		required	- 入力必須項目
 	submit		- 送信ボタン
 	password	- 書き込みが見えなくするテキストボックス
 	hidden		- 毎回打ち込むのが面倒な時、相手に送信される

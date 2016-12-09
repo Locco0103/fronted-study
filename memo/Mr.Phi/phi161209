@@ -1,0 +1,19 @@
+### テンプレート・スマホ対応・block属性
+
+##スマホ対応
+  *media queries レスポンシブ
+    局所的に用いる
+
+##テンプレート / header,footer,menu等
+  1.初級 ひとまずコピペ
+  2.中級 PHPによる方法
+  3.上級 Javascriptによる方法
+  (Dreamweaverテンプレートは重くなる)
+
+##block属性
+>__block__
+>  -div
+>  -p
+
+>__inline__
+>  -span
