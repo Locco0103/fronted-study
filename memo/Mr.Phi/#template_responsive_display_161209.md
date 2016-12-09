@@ -1,4 +1,4 @@
-### テンプレート・スマホ対応・block属性
+# テンプレート・スマホ対応・display
 
 ##スマホ対応
   *media queries レスポンシブ
@@ -10,10 +10,15 @@
   3.上級 Javascriptによる方法
   (Dreamweaverテンプレートは重くなる)
 
-##block属性
+##display属性
+>```{display:flex;}```
+>簡単に横並び♪
+
+>```{display:block;}```
 >__block__
 >  -div
 >  -p
 
+>```{display:block;}```
 >__inline__
 >  -span
