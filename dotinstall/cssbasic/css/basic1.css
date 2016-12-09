@@ -1,0 +1,31 @@
+/*	cssbasic1用
+* {color:pink;}
+h1 {color:blue;}
+#l {color:green;}
+.ol {color:red;}　*/
+
+/* cssbasic2用 */
+/*h1,p {color:skyblue;}
+div p {color:red;}
+p.yeah {color:orange ;}
+span.yeah {color:green ;}
+span{color: gold;} */
+/*.yeah{color: blue}*/
+
+/*a[title] {color:red;}*/
+/*a[class~=goto] {color:purple;}*/
+/*ol li:first-child {color:pink;}
+a:link {color:blue;}
+a:visited {color:red;}
+a:hover {color:orange;}
+a:active {color:green;}
+
+p#hey:before {content:"say!";}
+p#hey:after {content:"Ho-ho!";}
+p#hey:first-line{color:pink;}
+p#hey:first-letter{color:pink;}*/
+
+body {font-size:30px;}
+h1 {font-size:2em;}
+h2 {font-size:50%;}
+h1 {color:#00ff00;}
