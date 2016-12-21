@@ -1,0 +1,86 @@
+#JavaScript7 memo
+
+##Geolocation API (p.111)
+  *デバイスの現在位置を取得するためのAPI
+    -getCurrentPosition():現在の位置情報を取得
+      ```
+      navigator.geolocation.getCurrentPosition(
+        ①位置情報の取得に成功した時の処理,成功コールバック関数
+        ②位置情報の取得に失敗した時の処理,失敗コールバック関数
+        ③動作オプション
+        )
+      ```
+      *動作オプション
+        +timeout:10000., この秒数をこえるとタイムアウト
+        +macimumAge:0, 有効期限 0はブラウザを閉じるまで
+        +enableHighAccuracy:true　精度の高い位置情報を取得するか
+
+    -watchPosition():位置情報を定期的に監視、取得
+      ```
+      var id = navigator.geolocation.watchPosition(
+        ①位置情報の取得に成功した時の処理,成功コールバック関数
+        ②位置情報の取得に失敗した時の処理,失敗コールバック関数
+        ③動作オプション
+        )
+      ```
+    -clearWatch():watchPositionの監視を停止
+      ```
+      stopボタンのid.addEventListener('click',
+      funciton(){
+        navigator.geolocation.clearwatch(watchPositionのid);
+      })
+      ```
+    -Google Maps APIとの連携 (JS7/gmaps.html)
+      +現在位置 pos.coords.longitude
+
+##Web Storage
+  *ブラウザにデータを保存するための仕組み
+  *データを特定するための名前(Key)と値(Value)のセットでデータを管理する
+
+  ###WebStorage / クッキー
+    -Webstorage
+      +5MB
+      +有効期限なし
+      +データ通信　自動で発生しない
+    -クッキー
+      +4KB
+      +有効期限あり
+      +データ通信　リクエスト毎に発生
+
+    ####Webstorageの種類
+      - セッションストレージ : ブラウザが開いている間、使用可能
+      - ローカルストレージ : ウィンドウを閉じても有効、データを保存
+
+    ####To Do アプリの作成　PRACTICE 11 / 再度挑戦！
+      -getToDo関数
+
+##Offline Application
+  *Application Cache:HTMLやCSS,JavaScripteをローカル環境に保存しておき、オフラインの状態でも、保存しておいたファイルでアプリケーションを、実行できるような仕組みを提供するもの
+
+  -使い方
+    1.キャッシュマニュフェストの準備
+      +.manifest ブラウザがキャッシュする必要のあるファイルを列挙したテキストファイル 
+      +CACHE MANIFEST -> index.html/style.css/app.js/jquery.js
+
+    2.manifest属性の記述
+      +<html manifest = "app.manifest">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

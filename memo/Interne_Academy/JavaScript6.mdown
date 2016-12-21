@@ -1,0 +1,134 @@
+#JavaScript6 memo
+
+##HTML5
+  ### 狭義のHTML5 Markup言語
+    -新しく加わったタグ、属性のみ
+
+  ### 広義のHTML5
+    -CSS3 / JavaScript API も含めて
+
+##HTML5 Web API
+  -ブラウザ内に組み込まれたJavaScriptを実装
+    + ブラウザ上でドラッグ＆ドロップ
+    + Canvas API
+
+  ###canvas要素
+    1.領域を定義[HTML,CSS]
+      - <canvas width="" height="">canvasに対応していないブラウザに対してこの文章が出る</canvas>
+    2.JavaScript(canvas 2D context API)で図形を描画 (p.92)
+      ```
+      window.addEventListener('DOMContentLoaded',
+        funciton(){
+          if(HTMLCanvasElement){
+            var cv = document.querySelector('cv');
+            var c = cv.getContext('2d');
+          }
+        }
+      );
+      ```
+      -DOMContentLoaded:DOMコンテンツがロードされたら
+            load: ある一部がロードされたら
+      -if(HTMLCanvasElement):キャンバス要素がもしあれば
+      -getContext('2d'):canvas 2d Context API呼び出し    
+
+    #### 矩形（くけい）の描画
+      -#.fillRect(x,y,width,height):塗りつぶした矩形
+      -#.strokeRect(x,y,width,height):枠線のみの矩形
+      -#.clearRect(x,y,width,height):矩形の領域をクリア
+
+    #### パスによる描画
+      -#.beginPath():新たなパスの作成
+      -#.moveTo(x,y):パスの視点
+      -#.lineTo(x,y):指定した座標までパスを引く
+      -#.closePath():最終座標を結ぶ
+      -#.stroke():枠線のみ
+      -#.fill():塗りつぶし
+      -例:六角形
+        ```
+        c.beginPath();
+        c.moveTo(100, 25);
+        c.lineTo(50, 100);
+        c.lineTo(100, 175);
+        c.lineTo(175, 175);
+        c.lineTo(225, 100);
+        c.lineTo(175, 25);
+        c.closePath();
+        c.stroke();
+        ```
+    ### スタイルの指定
+      -#.strokeStyle='':線の色
+      -#.fillStyle='':塗りつぶしの色
+      -#.lineWidth=:線の太さ
+      ```
+      c.strokeStyle='rgba=(0,255,0,0.5)';
+      c.fillStyle='green';
+      c.lineWidth=8;
+      ```
+
+    ###画像の貼り付け
+      -オブジェクト.drawImage(イメージオブジェクト,x1,y1,w1,h1,x2,y2,w2,h2)
+        + 1:元の画像
+        + 2:キャンバス内に新しく生成する画像について
+      -オブジェクトの生成
+        var 変数名 = new オブジェクト名;
+          + var img = new Image();
+          + img.src = './images/.jpg';
+
+    ###Dataの出力
+      -DataURL形式に変換する
+        Canvasオブジェクト.toDataURL("image/pnf")
+
+    ###アニメーション 四角が移動する
+      -fillRect() clearRect() の組み合わせ
+      -setInterval(実行する処理,ミリ秒)
+        ```
+        window.addEventListener('DOMContentLoaded',
+          function() {
+            if (HTMLCanvasElement) {
+              var cv = document.querySelector('#cv');
+              var c = cv.getContext('2d');
+              var x = 0, y = 0;
+              setInterval(function() {
+                c.clearRect(0, 0, 300, 200);
+                c.fillRect(x, y, 20,20);
+                x++;
+                y++;
+              }, 100);
+            }
+          }
+        );
+        ```
+      ###Practice10 簡単な描写アプリ
+        ####ボタンをクリックした時の処理
+          ```
+          document.getElementById('rectBtn').addEventListener('click',function(e){
+            tools = 0;
+            })
+          ```
+          tools === 0 なら四角形を生成
+          tools === 1 なら鉛筆で描写
+
+        ####描写の処理
+          - mousedown:マウスをクリックしたら
+          - mouse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

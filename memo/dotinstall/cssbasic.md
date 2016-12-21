@@ -22,8 +22,10 @@
 
 ##属性セレクタ：
   aタグ 
-    - a[title="###"]      - aのタイトルが###のタグ
-    - a[class~="###"] - ###というテキストがあるタグ
+  <a href="http://###" title="###" class="###"></a>
+    - a[href="http://###"] / aのリンク先がhttp://###のタグ 
+    - a[title="###"]  / aのタイトルが###のタグ
+    - a[class~="###"] / ###というテキストがあるタグ
 
 ##擬似クラス
   - 子要素 指定  - ul li:first-child
@@ -83,7 +85,133 @@
 
 ##margin の相殺
   二つのbox間のmarginは大きい方のmarginとなる
+
+##text
+  - color:orange;
+  - font-size:14px;
+  - font-family:Arial, Helvetica;
+  - font-weight:bold / none;
+  - text-align: right/center/left ;
+  - text-decoration: underline/line-through/none
+
+##list
+  - list-style-type: disc/circle/square/decimal/lower-alpha
+  - list-style-img: url('');
+  - list-style-position: inside/outside
+  - list-style
+
+##cursor
+  - cursor:help/move/pointer/url('###''),auto 
+
+##background
+  - background-color: 
+  - background-image: url('')
+  - background-repeat: no-repeat/repeat-x
+  - background-position: 10px 10px/ top center
+  - background-attachment: scroll/fixed
+
+##display
+  - block (h1 / p / div)
+    +widthで幅指定
+    +勝手に改行
+  - inline(span / a)
+    +widthで幅指定　不可
+    +改行されない
+  - inline-block
+    +inlineだがwidthで幅指定
+  - list-item
+  - none
+
+  - table
+  - table-cell
+  - table-row
+    +使い方
+      .container{
+        display:table;
+      }
+      .row{
+        display:table-row;
+      }
+      .box{
+        display:table-cell;
+        width:100px;
+      }
+      .gray{background:gray;}
+      .pink{background:pink;}
+      .orange{background:orange;}
+      .yellow{background:yellow;}
+
+      <div class="container">
+        <div class="row">
+          <div class="box gray">gray gray gray gray gray gray</div>
+          <div class="box pink">pink pink pink pink pink pink</div>
+        </div>
+        <div class="row">
+          <div class="box orange">orange orange</div>
+          <div class="box yellow">yellow yellow yellow yellow yellow yellow yellow </div>
+        </div> 
+      </div>
+
+##position
+  -static / はじめの位置
+  -relative / 親要素からの相対距離
+  -fixed / スクロールに関わらず固定
+  -absolute /絶対位置
+
+##z-index
+  - static以外のpositionに有効
+
+##overflow (はみだしているテキストに対して)
+  - visible /そのままはみだす
+  - hidden  /はみだしたものを隠す
+  - scroll  /はみだしたものをスクロールでみる
+
+##line-height
+  - ボックスの大きさ
+  - font-sizeに対しての割合で大きさを指定したい時
+    font-size:18px;
+    line-height:1.5;
+
+##vertical-align
+  - baseline / top / bottom / middle
+
+##float
+  - left / right
+
+##clear floatによる重なりを解除
+  - left / right / both
+  - block要素にのみ
+
 ----------------------------------------------
 sublime shortcut
   - コメント : command + /
   - 行の移動 : command + control + カーソル
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

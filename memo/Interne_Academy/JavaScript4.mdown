@@ -1,0 +1,143 @@
+#JavaScript4 memo
+
+##Ajax (p.63)
+  -非同期通信
+  -Google Mapなど
+
+  ###Ajaxの流れ
+    ブラウザ -> XMLHTTPRequestクラス -> Webサーバー -> XMLHTTPRequestクラス ->ブラウザ
+        （作成）               (リクエスト) (レスポンスJSON,XML TXT)      (表示DOM)
+
+  ###Ajaxの基礎
+    - FFFTPを用いたアップロード方法
+
+  ###Ajaxアプリ作成の基礎
+
+eventListener(window, 'load', function() {
+  eventListener(document.getElementById('btn'), 'click', function() {
+    var xhr;
+    if (XMLHttpRequest) {
+      xhr = new XMLHttpRequest();
+    } else if (ActiveXObject) {
+      try {
+        xhr = new ActiveXObject('Msxml2.XMLHTTP');
+      } catch (e) {
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+      }
+    } else {
+      return false;
+    }
+
+    xhr.open('GET', 'message.txt');
+    xhr.onreadystatechange = function() {
+      var msg = document.getElementById('msg');
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          msg.innerHTML = xhr.responseText;
+        } else {
+          msg.innerHTML = 'エラーが発生しました。';
+        }
+      } else {
+        msg.innerHTML = '通信中...';
+      }
+    };
+    xhr.send(null);
+  });
+});
+
+    -XMLHttpRequestオブジェクトの作成
+      +IE7以降,その他のブラウザ : xhr = new XMLHTTPRequest
+      +IE6                  : xhr = new ActiveXObject('Msxml2.XMLHTTP')
+      +IE5.5以前             : xhr = new ActiveXObject('Microsoft.XMLHTTP')
+
+    -if / else if / else
+
+    -try...catch 構文{例文処理}
+      try構文ができなければ、catch構文を行う
+
+    -openメソッド
+      +データの送信形式とファイルの指定を行う
+      +xhr.open('GET/POST','message.txt')
+      +GET : URLにデータをつけて送信
+      +meddage.txt内文章を表示させる
+    -sendメソッド
+      +xhr.send(null)
+      +null : 空のデータ
+    -readyStateプロパティ : 通信の状態　(p.68)
+      +戻り値0 : openメソッドが呼び出されていない
+      + 1 : openメソッドは呼び出されたが、sendメソッドは呼び出されていない
+      + 2 :
+      + 3 :
+      + 4 :
+    -statusプロパティ:サーバーからの応答
+      + 200 : 処理成功
+      + 403 : アクセス拒否
+      + 404 :
+      + 500 :
+    -通信のまとめ
+      + 4 200 : サーバー正常に応答
+      + 4 200以外 : サーバーからエラー
+      + 4以外 : 通信中
+
+  ##JSON,XML
+    ###JSONの書式
+      -JavaScript Object Notation
+[
+  { "courseNum": "001", "title": "ホームページ制作", "point": 50 },
+  { "courseNum": "002", "title": "Photoshop", "point": 2709 },
+  { "courseNum": "003", "title": "Illustrator", "point": 2780 },
+  { "courseNum": "004", "title": "作品制作", "point": 2625 },
+  { "courseNum": "005", "title": "プロデュース", "point": 2940 }
+ ]
+
+    ###XML
+      -自分で好きなタグを作ることができる
+<?xml version="1.0" ?>
+<courses>
+  <course>
+    <courseNum>001</courseNum>
+    <title>ホームページ制作</title>
+    <point>50</point>
+  </course>
+  <course>
+    <courseNum>002</courseNum>
+    <title>Photoshop</title>
+    <point>2709</point>
+  </course>
+  <course>
+    <courseNum>003</courseNum>
+    <title>Illustrator</title>
+    <point>2780</point>
+  </course>
+  <course>
+    <courseNum>004</courseNum>
+    <title>作品制作</title>
+    <point>2625</point>
+  </course>
+  <course>
+    <courseNum>005</courseNum>
+    <title>プロデュース</title>
+    <point>2940</point>
+  </course>
+</courses>
+      -入れ子構造が書きやすい
+      -データは大きくなる
+
+    ### JSON 検索ボタンで用いられる
+      - JSON.parse
+        配列に変えることができる
+
+      - for(var i=0;i < courses.length;i++){}
+        配列の個数分だけ繰り返しを行う
+
+      - var doc=xhr.responseXML;
+        responseXML:サーバーから返信されたXMLデータ
+
+
+
+
+
+
+
+
+
