@@ -1,0 +1,48 @@
+body{
+  background:orange;
+}
+header{
+  background:tomato;
+}
+main{
+  background:lime;
+}
+footer{
+  background:orange;
+}
+.container{
+  width:300px;
+  margin:0 auto;
+  /*background:yellow;*/
+}
+#eyecatch{
+/*background:url("../images/bull dog.jpeg") no-repeat;
+  background-size:cover;
+  background-position:center;*/
+  height:10vh;
+}
+.imagelist{
+  background:yellow;
+  overflow:hidden;
+}
+.pig{
+  width:100px;
+}
+.left{
+  float:left;
+  width:120px;
+  padding:5px;
+}
+.right{
+  float:left;
+  width:160px;
+  /*padding:5px;*/
+  font-size:80%;
+}
+h2{
+  padding-bottom:0px;
+}
+h3{
+  border-top:solid 1px black;
+  padding-top:5px;
+}
