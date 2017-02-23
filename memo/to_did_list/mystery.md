@@ -2,9 +2,13 @@
 ----------------------------------------
 ##未解決
 
+-reset.css/normalized.css使っている？
+
+
+
 -画面上部にゆっくり戻る時、Javascript?CSS3?
 
--reset.css/normalized.css使っている？
+
 
 
 -HP　動いている動物をドラッグ＆ドロップで掴みたい

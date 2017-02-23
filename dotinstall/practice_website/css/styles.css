@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*common*/
+
+body{
+  font-size:14px;
+  font-family:Copperplate, "Copperplate Gothic Light";
+  color:#333;
+}
+
+a{
+  text-decoration:none;
+}
+
+p{
+  line-height:2;
+}
+
+/*aタグのボタンの作成*/
+.btn{
+  display:inline-block;
+  width:410px;
+  line-height:45px;
+  text-align:center;
+  background:#fff;
+  color:skyblue;
+  border-radius:10px;
+  opacity:0.9;
+}
+
+.btn:hover{
+  opacity:1;
+}
+
+/*header*/
+
+header{
+  background:url('../images/fiji.jpg');
+  background-size:cover;
+  background-position:center center;
+}
+
+header .container{
+  width:900px;
+  margin:0 auto;
+  height:320px;
+  padding-top:10px;
+}
+
+header p,header h1{
+  color:#fff;
+}
+
+header p{
+  padding-top:50px;
+  padding-bottom:20px;
+}
+
+header h1{
+  font-size:38px;
+  margin-bottom: 30px
+}
+
+
+
+

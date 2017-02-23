@@ -44,40 +44,40 @@ body{
   background-position: center;
 }
 
-#menu{
-  width:80vw;
+#pc-menu{
+  width:90vw;
   height:20vh;
   margin-left:auto;
   margin-right:auto;
 }
 
-#menu ul{
+#pc-menu ul{
   height:100%;
   list-style:none;
   display:flex;
   justify-content:space-around;
   align-items:center;
   font-size:1rem;
+  margin-top:0px;
 }
 
-#menu li{
+#pc-menu li{
   transition:500ms;
 }
 
-#menu ul .menu{
+#pc-menu ul .menu{
   color:white;
   text-shadow:1px 1px 3px silver;
   width:16%;
-  /*background-color:red;*/
   text-align:center;
   font-weight: bold;
 }
 
-#menu ul img{
+#pc-menu ul img{
   /*background-color:blue;*/
 }
 
-#menu ul img:hover{
+#pc-menu ul img:hover{
   transform:scale(1.1);
 }
 
@@ -88,19 +88,19 @@ a:visited{
   color:white;
 }
 
-#menu .left{
+#pc-menu .left{
   border-left:1px solid #ffffff;
 }
 
-#menu .left:hover{
+#pc-menu .left:hover{
   transform: rotate(10deg);
 }
 
-#menu .right{
+#pc-menu .right{
   border-right:1px solid #ffffff;
 }
 
-#menu .right:hover{
+#pc-menu .right:hover{
   transform: rotate(-10deg);
 }
 
@@ -301,6 +301,32 @@ h3{
   letter-spacing: 1px;
   text-shadow:1px 1px 1px gray;
 }
+
+#mobile-menu{
+  display:none;
+}
+
+/*small*/
+@media (max-width:600px){
+
+#pc-menu{
+  display:none;
+}
+.sasa_tsuna{
+  display:none;
+}
+#mobile-menu{
+  display:flex; 
+  justify-content:space-around;
+  padding-top:5vh;
+}
+
+
+
+}
+
+
+
 
 /*ここからindex.html*/
 #indexmain{
