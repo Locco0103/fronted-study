@@ -1,4 +1,3 @@
 # fronted-study
 
-abc
-hoge
+develop ブランチを作ったよ
