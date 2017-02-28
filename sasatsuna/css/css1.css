@@ -1,125 +1,90 @@
 body{
-  background-color:hsla(210,100%,50%,0.7);
   margin:0px;
   padding:0px;
-  color:white;
+  color:#fff;
+  font-family:Copperplate, "Copperplate Gothic Light";
+}
+a{
+  text-decoration:none;
 }
 
-#header{
+/* header */
+
+header{
   width:100vw;
   height:100vh;
   margin:0;
   padding:0;
-}
-
-#headimage1{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/fiji.jpg");
+  background-image:url("../images/home-top.jpg");
   background-size:cover;
-  background-position: center;
+  background-position: center center;
 }
-
-#headimage2{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/shomeishiki.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
-#headimage3{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/kichidon.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
-#headimage4{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/ratphone.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
 #pc-menu{
-  width:90vw;
-  height:20vh;
+  width:100vw;
+  height:15vh;
   margin-left:auto;
   margin-right:auto;
+  background:rgba(256,256,256,0.3);
 }
-
 #pc-menu ul{
+  width:90vw;
   height:100%;
   list-style:none;
   display:flex;
   justify-content:space-around;
   align-items:center;
-  font-size:1rem;
   margin-top:0px;
 }
-
-#pc-menu li{
+#pc-menu .menu{
+  font-size:1.5rem;
   transition:500ms;
 }
-
+#pc-menu .menu:hover{
+  transform:scale(1.1);
+}
+#pc-menu .img{
+  padding:5vh 3vh 0;
+  background:rgba(256,256,256,0.3);
+  border-radius:0 0 12vh 12vh;
+}
 #pc-menu ul .menu{
   color:white;
-  text-shadow:1px 1px 3px silver;
+  text-shadow:1px 1px 3px #333;
   width:16%;
   text-align:center;
   font-weight: bold;
 }
-
 #pc-menu ul img{
-  /*background-color:blue;*/
+  transition:500ms;
 }
-
 #pc-menu ul img:hover{
   transform:scale(1.1);
 }
-
-a{
-  text-decoration:none;
-}
-a:visited{
+#pc-menu a:link{
   color:white;
 }
-
-#pc-menu .left{
-  border-left:1px solid #ffffff;
+#pc-menu a:visited{
+  color:white;
 }
-
-#pc-menu .left:hover{
-  transform: rotate(10deg);
-}
-
-#pc-menu .right{
-  border-right:1px solid #ffffff;
-}
-
-#pc-menu .right:hover{
-  transform: rotate(-10deg);
-}
-
-.animation{
-  font-size:10rem;
+.impact{ 
+  width:80vw;
+  height:85vh;
   padding:0px;
-  text-shadow:2px 2px 10px white;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding-left:20vw;
 }
-
+.impact img:last-child{
+  padding-top:25vh;
+}
+/*
 .sasa{
-  margin-left:60%;
-  margin-right:40%;
   animation:sasa 2500ms ease 0ms;
-  /*animation-direction:alternate;*/
 }
-
 @keyframes sasa{
   0%{
-    margint-left:50%;
+    margin-left:50%;
     margin-right:50%;
     opacity:0;
   }
@@ -134,14 +99,9 @@ a:visited{
     opacity:0.7;
   }
 }
-
 .tsuna{
-  margin-left:76%;
-  margin-right:34%;
   animation:tsuna 4500ms ease 0ms;
-  /*animation-direction:alternate;*/
 }
-
 @keyframes tsuna{
   0%{
     margint-left:56%;
@@ -158,8 +118,8 @@ a:visited{
     margin-right:24%;
     opacity:0.7;
   }
-}
-
+}*/
+/*
 .sasa_tsuna{
   font-size:3rem;
   text-shadow: 1px 1px 10px white;
@@ -169,7 +129,6 @@ a:visited{
   animation:text 800ms ease 4500ms;
   animation-iteration-count: 3;
 }
-
 @keyframes text{
   0%{
   }
@@ -178,32 +137,38 @@ a:visited{
   }
   100%{
   }
-}
+}*/
 
-.main1{
+/* news */
+.news{
   width:100vw;
   height:50vh;
   background-color:white;
-  color:black;
-  box-shadow:0 0 1px black;
+  color:#79604c;
   text-align:center;
-  /*縦中央寄せ（heightと同じ値）*/
   line-height:50vh;
   font-weight:bold;
   letter-spacing:0.8rem;
+  border:2px solid #79604c;
+}
+.news h1{
+  margin:0px;
 }
 
-.main2{
+/* main-menu */
+
+.main-menu{
   display:flex;
   flex-wrap:wrap;
   background-color:white;
 }
-
-.main2 a:hover{
-  opacity:0.75;
-  transition:800ms;
+.main-menu a{
+  color:white;
+  transition:800ms; 
 }
-
+.main-menu a:hover{
+  opacity:0.75;
+}
 .content{
   width:50vw;
   height:100vh;
@@ -211,73 +176,91 @@ a:visited{
 .textile{
   display:flex;
   justify-content: center;
- /* align-content:center;*/
+  align-content:center;
   flex-wrap:wrap;
-/*  display:table-cell;
-  text-align:center;
-  vertical-align: middle;*/
   font-size:4.5rem;
   letter-spacing:0.1em;
+  background-image:linear-gradient(white,#79604c);
 }
-.content1,.content4,.content5{
-  background-image:linear-gradient(white,skyblue);
+.main-menu .textile h2{
+  width:50vw;
+  text-align:center;
+  margin-top:31vh;
+  margin-bottom:10px;
+  font-size:5rem;
+  letter-spacing: 0.8rem;
+  text-shadow:1px 1px 10px #79604c;
 }
+.main-menu .textile h3{
+  font-size: 1rem;
+  margin-bottom:200px;
+  text-shadow:1px 1px 5px #79604c;
+}
+.photo{
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+}
+.text-box{
+  width:18vw;
+  height:20vh;
+  padding:10px;
+  margin:0 5vw 5vw 0;
+  background:rgba(256,256,256,0.8);
+  color:#79604c;
+}
+.text-box h3{
+  text-align: right;
+  line-height:5vh;
+  padding-right:10px;
+}
+
 .content2{
-  background-image:url("../images/shomeishiki.jpg");
+  background-image:url("../images/sky.jpg");
   background-size:cover;
   background-position:center;
 }
 .content3{
-  background-image:url("../images/kichidon.jpg");
+  background:#79604c;
+  background-image:url("../images/project.jpg");
   background-size:cover;
-}
-/*.content4{
-  background-image:linear-gradient(white,gray);
-}
-.content5{
-  background-image:linear-gradient(white,gray);
-}*/
-.content6{
-  background-color:brown;
-  background-image:url("../images/ratphone.jpg");
-  background-size:33.3%;
   background-position:center;
 }
-h2{
-  /*background-color:pink;*/
-  margin-top:244px;
-  margin-bottom:10px;
-  font-size:5rem;
-  letter-spacing: 0.8rem;
-  text-shadow:1px 1px 10px skyblue;
+.content6{
+  background-image:url("../images/community2.jpg");
+  background-size:cover;
+  background-position:center;
+  font-family:HiraMinPro-W6;
 }
-h3{
-  font-size: 1rem;
-  /*background-color:red;*/
-  margin-bottom:200px;
-  text-shadow:1px 1px 5px skyblue;
+.content7{
+  background-image:url("../images/contact.jpg");
+  background-size:cover;
+  background-position:center;
+  font-family:HiraMinPro-W6;
 }
+
+
+/* 完了 */
 
 #nav{
   width:100vw;
   height:10vh;
-  background-color:white;
-  color:black;
+  background-color:#79604c;
+  color:#79604c;
   display:flex;
   justify-content: center;
 }
-
 #nav a:visited{
-  color:silver;
+  color:#79604c;
 }
-
 #totop{
-  width:100px;
+  width:10vh;
   height:100%;
+  background-color:white;
   display:flex;
   justify-content: center;
   align-items:center;
-  box-shadow:0 0 3px black;
+  box-shadow:0 0 3px white;
   text-decoration:none;
 }
 
@@ -285,51 +268,27 @@ h3{
   width:100vw;
   height:30vh;
   background-color: white;
-  box-shadow:0 0 1px 1px black;
-  color:black;
+  color:#79604c;
   text-align:center;
   line-height:30vh;
   letter-spacing: 0.8rem; 
 }
-#footer{
+footer{
   padding-top:10px;
   width:100vw;
   height:10vh;
-  background-image:linear-gradient(to left,skyblue,white);
+  background-image:linear-gradient(to left,silver,white);
   font-size: 0.2rem;
   text-align:center;
   letter-spacing: 1px;
   text-shadow:1px 1px 1px gray;
 }
 
-#mobile-menu{
-  display:none;
-}
-
-/*small*/
-@media (max-width:600px){
-
-#pc-menu{
-  display:none;
-}
-.sasa_tsuna{
-  display:none;
-}
-#mobile-menu{
-  display:flex; 
-  justify-content:space-around;
-  padding-top:5vh;
-}
-
-
-
-}
-
 
 
 
 /*ここからindex.html*/
-#indexmain{
+/*#indexmain{
   position:relative;
   display:inline-block;
   background: white;
@@ -352,9 +311,17 @@ h3{
   position:absolute;
   top:200px;
   left:15vw;
+}*/
+
+/*about.html*/
+/*#headimage2{
+  width:100%;
+  height:100vh;
+  background-image:url("../images/shomeishiki.jpg");
+  background-size:cover;
+  background-position: center;
 }
 
-/*ここからabout.html*/
 #aboutmain{
   background-color:green;
   height:100vh;
@@ -377,9 +344,17 @@ h3{
   background-color:black;
   height:100vh;
   width:100vw;
+}*/
+
+/*project.html*/
+/*#headimage3{
+  width:100%;
+  height:100vh;
+  background-image:url("../images/kichidon.jpg");
+  background-size:cover;
+  background-position: center;
 }
 
-/*ここからproject.html*/
 #projectmain{
   background-color:black;
   height:100vh;
@@ -390,7 +365,16 @@ h3{
   background-color:green;
   height:100vh;
   width:100vw; 
+}*/
+
+
+/*contact.html*/
+
+/*#headimage4{
+  width:100%;
+  height:100vh;
+  background-image:url("../images/ratphone.jpg");
+  background-size:cover;
+  background-position: center;
 }
-
-
-
+*/
