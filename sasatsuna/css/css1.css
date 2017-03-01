@@ -11,13 +11,22 @@ a{
 /* header */
 
 header{
+  position: relative;
   width:100vw;
   height:100vh;
   margin:0;
   padding:0;
-  background-image:url("../images/home-top.jpg");
-  background-size:cover;
-  background-position: center center;
+}
+header .bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 250ms;
+}
+header:hover .bg {
+  -webkit-filter: brightness(50%);
 }
 #pc-menu{
   width:100vw;
@@ -66,18 +75,20 @@ header{
 #pc-menu a:visited{
   color:white;
 }
-.impact{ 
-  width:80vw;
-  height:85vh;
-  padding:0px;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  padding-left:20vw;
+.impact {
+  position: absolute;
+  right: 5vw;
+  bottom: 5vw;
 }
 .impact img:last-child{
-  padding-top:25vh;
 }
+.impact .sasa {
+  margin-bottom: 460px;
+  margin-right: -100px;
+}
+.impact .tsuna {
+}
+
 /*
 .sasa{
   animation:sasa 2500ms ease 0ms;
