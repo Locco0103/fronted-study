@@ -77,17 +77,12 @@ header:hover .bg {
 }
 .impact {
   position: absolute;
-  right: 5vw;
-  bottom: 5vw;
+  right: 3vw;
 }
-.impact img:last-child{
+.impact img{
+  height:85vh;
 }
-.impact .sasa {
-  margin-bottom: 460px;
-  margin-right: -100px;
-}
-.impact .tsuna {
-}
+
 
 /*
 .sasa{
@@ -171,14 +166,14 @@ header:hover .bg {
 .main-menu{
   display:flex;
   flex-wrap:wrap;
-  background-color:white;
+  /*background-color:white;*/
 }
 .main-menu a{
   color:white;
   transition:800ms; 
 }
 .main-menu a:hover{
-  opacity:0.75;
+  opacity:0.6;
 }
 .content{
   width:50vw;
@@ -211,7 +206,8 @@ header:hover .bg {
   display:flex;
   justify-content:flex-end;
   align-items:flex-end;
-}
+  position:relative;
+} 
 .text-box{
   width:18vw;
   height:20vh;
@@ -225,34 +221,20 @@ header:hover .bg {
   line-height:5vh;
   padding-right:10px;
 }
-
-.content2{
-  background-image:url("../images/sky.jpg");
-  background-size:cover;
-  background-position:center;
+.photo .bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-1;
+  transition:500ms;
 }
-.content3{
-  background:#79604c;
-  background-image:url("../images/project.jpg");
-  background-size:cover;
-  background-position:center;
+.photo:hover .bg{
+  -webkit-filter: brightness(50%);
 }
-.content6{
-  background-image:url("../images/community2.jpg");
-  background-size:cover;
-  background-position:center;
+.content6,.content7 .text-box h3{
   font-family:HiraMinPro-W6;
 }
-.content7{
-  background-image:url("../images/contact.jpg");
-  background-size:cover;
-  background-position:center;
-  font-family:HiraMinPro-W6;
-}
-
-
-/* 完了 */
-
 #nav{
   width:100vw;
   height:10vh;
