@@ -250,6 +250,7 @@ header:hover .bg {
   width:10vh;
   height:100%;
   background-color:white;
+  color:#79604c;
   display:flex;
   justify-content: center;
   align-items:center;
