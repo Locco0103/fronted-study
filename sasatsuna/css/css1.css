@@ -23,17 +23,19 @@ header .bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 250ms;
+  filter:blur(4px);
+  /*transition: 250ms;*/
 }
-header:hover .bg {
+/*header:hover .bg {
   -webkit-filter: brightness(50%);
-}
+}*/
 #pc-menu{
   width:100vw;
   height:15vh;
-  margin-left:auto;
-  margin-right:auto;
-  background:rgba(256,256,256,0.3);
+  background:rgba(0,0,0,0.4);
+  font-family:DFPMaruGothic-SB,Helvetica;
+  display:flex;
+  justify-content:space-around;
 }
 #pc-menu ul{
   width:90vw;
@@ -44,17 +46,27 @@ header:hover .bg {
   align-items:center;
   margin-top:0px;
 }
-#pc-menu .menu{
-  font-size:1.5rem;
-  transition:500ms;
-}
-#pc-menu .menu:hover{
-  transform:scale(1.1);
-}
-#pc-menu .img{
-  padding:5vh 3vh 0;
+#pc-menu ul .img{
+  width:14vw;
+  padding:5vh 2vh 3vh;
   background:rgba(256,256,256,0.3);
   border-radius:0 0 12vh 12vh;
+  display:flex;
+  justify-content:center;
+}
+#pc-menu ul .img a{
+  padding-top:2vh;
+  padding-bottom:1vh;
+  display:flex;
+  justify-content:center;
+}
+#pc-menu ul .img a img{
+  width:120px;
+  height:100px;
+  transition:500ms;
+}
+#pc-menu ul img:hover{
+  transform:scale(1.1);
 }
 #pc-menu ul .menu{
   color:white;
@@ -62,11 +74,11 @@ header:hover .bg {
   width:16%;
   text-align:center;
   font-weight: bold;
-}
-#pc-menu ul img{
+  letter-spacing:2px;
+  font-size:1.2rem;
   transition:500ms;
 }
-#pc-menu ul img:hover{
+#pc-menu .menu:hover{
   transform:scale(1.1);
 }
 #pc-menu a:link{
@@ -75,13 +87,34 @@ header:hover .bg {
 #pc-menu a:visited{
   color:white;
 }
-.impact {
+header .blackbox{
+  background-color:rgba(0,0,0,0.4);
+  width:100vw;
+  height:25vh;
+  position:absolute;
+  bottom:0;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1rem;
+  font-family:'Apple SD Gothic Neo';
+  text-shadow:0px 0px 15px #fff;
+}
+header .blackbox h2{
+  font-size:3rem;
+  letter-spacing:10px;
+}
+header .blackbox h3{
+  font-size:0.9rem;
+}
+
+/*.impact {
   position: absolute;
   right: 3vw;
 }
 .impact img{
   height:85vh;
-}
+}*/
 
 
 /*
@@ -278,7 +311,9 @@ footer{
   text-shadow:1px 1px 1px gray;
 }
 
-
+.impact img{
+  display:none;
+}
 
 
 /*ここからindex.html*/
