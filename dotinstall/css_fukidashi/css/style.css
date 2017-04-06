@@ -1,0 +1,106 @@
+body{
+  padding:0px 10px 40px;
+}
+.ex1{
+  width:100px;
+  height:100px;
+  background-color:#eee;
+}
+.ex2{
+  width:100px;
+  height:100px;
+  background-color:#eee;
+  border-style:solid;
+  border-width:20px;
+  border-color:red green pink yellow;
+}
+.ex3{
+  width:0px;
+  height:0px;
+  background-color:#eee;
+  border-style:solid;
+  border-width:20px;
+  border-color:red green pink yellow;
+}
+.ex4{
+  width:0px;
+  height:0px;
+  border-style:solid;
+  border-width:20px;
+  border-color:red transparent transparent transparent;
+}
+.ex5{
+  width:0px;
+  height:0px;
+  border-style:solid;
+  border-width:30px 20px 20px 0px;
+  border-color:red transparent transparent transparent;
+  transform:skew(-15deg,0);
+}
+.balloon1-1{
+  width:200px;
+  height:100px;
+  background-color:#ccc;
+  position:relative;
+  border-radius:5px;
+}
+.balloon1-1:before{
+  position:absolute;
+  bottom:-20px;
+  right:20px;
+  content:'';
+  width:0px;
+  height:0px;
+  border-style:solid;
+  border-width:10px;
+  border-color:#ccc transparent transparent transparent;
+}
+.balloon1-2{
+  width:200px;
+  height:100px;
+  background-color:#ccc;
+  position:relative;
+  border-radius:5px;
+}
+.balloon1-2:before{
+  position:absolute;
+  bottom:-20px;
+  right:20px;
+  content:'';
+  width:0px;
+  height:0px;
+  border-style:solid;
+  border-width:20px 20px 0px 0px;
+  border-color:#ccc transparent transparent transparent;
+  transform:skew(-15deg,0);
+}
+.balloon2-1{
+  width:200px;
+  height:100px;
+  background-color:#fff;
+  border:1px solid #ccc;
+  position:relative;
+  border-radius:5px;
+}
+.balloon2-1:before{
+  position:absolute;
+  bottom:-20px;
+  right:20px;
+  content:'';
+  width:0px;
+  height:0px;
+  border-style:solid;
+  border-width:10px;
+  border-color:#ccc transparent transparent transparent;
+}
+.balloon2-1:after{
+  position:absolute;
+  bottom:-19px;
+  right:20px;
+  content:'';
+  width:0px;
+  height:0px;
+  border-style:solid;
+  border-width:10px;
+  border-color:#fff transparent transparent transparent;
+}

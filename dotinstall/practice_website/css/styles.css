@@ -41,10 +41,12 @@ header{
 }
 
 header .container{
-  width:900px;
+  width:1000px;
   margin:0 auto;
   height:320px;
   padding-top:10px;
+  position:relative;
+  overflow: hidden;
 }
 
 header p,header h1{
@@ -61,6 +63,128 @@ header h1{
   margin-bottom: 30px
 }
 
+header img{
+  position:absolute;
+  right:0;
+  bottom:0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6)
+}
 
+section{
+  padding:90px 0;
+}
 
+section:nth-child(odd){
+  background-color:#f8f8f8;
+}
 
+section .container{
+  width:820px;
+  margin:0 auto;
+}
+
+section h2{
+  font-size:26px;
+  font-weigth:normal;
+  text-align:center;
+  margin:0 0 90px;
+}
+
+section:not(.section3) h2:after{
+ /* content:"hello";*/
+  display:block;
+  font-size:18px;
+  color:silver;
+}
+
+.section1 h2:after{
+  content:"hello1";
+}
+
+.section2 h2:after{
+  content:"hello2";
+}
+
+section img{
+  box-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+
+.row{
+  width:800px;
+  margin-bottom:90px;
+  overflow:hidden;
+}
+
+.row:last-child{
+  margin-bottom:0;
+}
+
+h3{
+  font-size:24px;
+}
+
+.desc{
+  width:360px;
+}
+
+.right{
+  float:right;
+  padding-left:40px;
+}
+.left{
+  float:left;
+  padding-right:40px;
+}
+
+/*section2*/
+
+.section2 h2{
+  margin-bottom:120px;
+}
+
+.section2 .container{
+  display:flex;
+  justify-content:space-between;
+}
+.column{
+  background:#fff;
+  width:240px;
+  box-sizing:border-box;
+  padding:45px 40px 26px;
+  overflow-wrap:break-word;
+  position:relative;
+}
+.column img{
+  border-radius:50%;
+  box-shadow:none;
+  border:10px solid #fff;
+  position:absolute;
+  right:0;
+  left:0;
+  margin:0 auto;
+  top:-40px;
+}
+h4{
+  text-align:center;
+}
+
+/*section3*/
+
+.section3{
+  background:url('../images/fiji.jpg');
+  background-size:cover;
+  background-position:center center;
+  text-align:center;
+}
+.section3 h2{
+  color:#fff;
+  margin-bottom:60px;
+}
+
+/*footer*/
+
+footer{
+  padding:90px 0;
+  text-align:center;
+  color:#ccc;
+}

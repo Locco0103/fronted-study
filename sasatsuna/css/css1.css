@@ -1,125 +1,134 @@
 body{
-  background-color:hsla(210,100%,50%,0.7);
   margin:0px;
   padding:0px;
-  color:white;
+  color:#fff;
+  font-family:Copperplate, "Copperplate Gothic Light";
+}
+a{
+  text-decoration:none;
 }
 
-#header{
+/* header */
+
+header{
+  position: relative;
   width:100vw;
   height:100vh;
   margin:0;
   padding:0;
 }
-
-#headimage1{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/fiji.jpg");
-  background-size:cover;
-  background-position: center;
+header .bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
-#headimage2{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/shomeishiki.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
-#headimage3{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/kichidon.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
-#headimage4{
-  width:100%;
-  height:100vh;
-  background-image:url("../images/ratphone.jpg");
-  background-size:cover;
-  background-position: center;
-}
-
 #pc-menu{
-  width:90vw;
-  height:20vh;
-  margin-left:auto;
-  margin-right:auto;
+  width:100vw;
+  height:15vh;
+  background:rgba(0,0,0,0.4);
+  font-family:DFPMaruGothic-SB,Helvetica;
+  display:flex;
+  justify-content:space-around;
 }
-
 #pc-menu ul{
+  width:90vw;
   height:100%;
   list-style:none;
   display:flex;
   justify-content:space-around;
   align-items:center;
-  font-size:1rem;
   margin-top:0px;
+  padding:0px;
 }
-
-#pc-menu li{
+#pc-menu ul .img{
+  width:14vw;
+  padding:5vh 2vh 3vh;
+  background:rgba(255,255,255,1);
+  border-radius:0 0 12vh 12vh;
+  display:flex;
+  justify-content:center;
   transition:500ms;
 }
-
+#pc-menu ul .img:hover{
+  /*background-color:;*/
+}
+#pc-menu ul .img a{
+  padding-top:2vh;
+  padding-bottom:1vh;
+  display:flex;
+  justify-content:center;
+}
+#pc-menu ul .img a img{
+  width:120px;
+  height:100px;
+  transition:500ms;
+}
+#pc-menu ul .img a img:hover{
+  transform:scale(0.4) rotate(1080deg);
+}
 #pc-menu ul .menu{
   color:white;
-  text-shadow:1px 1px 3px silver;
+  text-shadow:1px 1px 3px #333;
   width:16%;
   text-align:center;
   font-weight: bold;
+  letter-spacing:2px;
+  font-size:1.2rem;
+  transition:500ms;
 }
-
-#pc-menu ul img{
-  /*background-color:blue;*/
-}
-
-#pc-menu ul img:hover{
+#pc-menu .menu:hover{
   transform:scale(1.1);
 }
-
-a{
-  text-decoration:none;
-}
-a:visited{
+#pc-menu a:link{
   color:white;
 }
-
-#pc-menu .left{
-  border-left:1px solid #ffffff;
+#pc-menu a:visited{
+  color:white;
+}
+header .blackbox{
+  background-color:rgba(0,0,0,0.4);
+  width:100vw;
+  height:25vh;
+  position:absolute;
+  bottom:0;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1rem;
+  font-family:'Apple SD Gothic Neo';
+  text-shadow:0px 0px 15px #fff;
+  transition:500ms;
+}
+header .blackbox:hover{
+  background-color:rgba(255,255,255,0.5);
 }
 
-#pc-menu .left:hover{
-  transform: rotate(10deg);
+header .blackbox h2{
+  font-size:3rem;
+  letter-spacing:10px;
+  padding-left:10px;
+}
+header .blackbox h3{
+  font-size:0.9rem;
 }
 
-#pc-menu .right{
-  border-right:1px solid #ffffff;
+/*.impact {
+  position: absolute;
+  right: 3vw;
 }
+.impact img{
+  height:85vh;
+}*/
 
-#pc-menu .right:hover{
-  transform: rotate(-10deg);
-}
-
-.animation{
-  font-size:10rem;
-  padding:0px;
-  text-shadow:2px 2px 10px white;
-}
-
+/*
 .sasa{
-  margin-left:60%;
-  margin-right:40%;
   animation:sasa 2500ms ease 0ms;
-  /*animation-direction:alternate;*/
 }
-
 @keyframes sasa{
   0%{
-    margint-left:50%;
+    margin-left:50%;
     margin-right:50%;
     opacity:0;
   }
@@ -134,14 +143,9 @@ a:visited{
     opacity:0.7;
   }
 }
-
 .tsuna{
-  margin-left:76%;
-  margin-right:34%;
   animation:tsuna 4500ms ease 0ms;
-  /*animation-direction:alternate;*/
 }
-
 @keyframes tsuna{
   0%{
     margint-left:56%;
@@ -158,8 +162,8 @@ a:visited{
     margin-right:24%;
     opacity:0.7;
   }
-}
-
+}*/
+/*
 .sasa_tsuna{
   font-size:3rem;
   text-shadow: 1px 1px 10px white;
@@ -169,7 +173,6 @@ a:visited{
   animation:text 800ms ease 4500ms;
   animation-iteration-count: 3;
 }
-
 @keyframes text{
   0%{
   }
@@ -178,32 +181,53 @@ a:visited{
   }
   100%{
   }
-}
+}*/
 
-.main1{
+/* news */
+.news{
   width:100vw;
   height:50vh;
   background-color:white;
-  color:black;
-  box-shadow:0 0 1px black;
-  text-align:center;
-  /*縦中央寄せ（heightと同じ値）*/
-  line-height:50vh;
+  color:#79604c;
   font-weight:bold;
-  letter-spacing:0.8rem;
+  letter-spacing:0.5rem;
+  border:2px solid #79604c;
+  word-break:break-all;
+}
+.news .icons{
+  margin-top:5vh;
+  width:80vw;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  justify-content: space-beween;
+}
+.news img{
+  margin-left:auto;
+  margin-right:auto;
+}
+.news h1{
+  margin-top:8vh;
+  width:70vw;
+  font-family:'Apple SD Gothic Neo';
+  margin-left: auto;
+  margin-right:auto;
+  font-size:12px;
 }
 
-.main2{
+/* main-menu */
+
+.main-menu{
   display:flex;
   flex-wrap:wrap;
-  background-color:white;
 }
-
-.main2 a:hover{
-  opacity:0.75;
-  transition:800ms;
+.main-menu a{
+  color:white;
+  transition:800ms; 
 }
-
+.main-menu a:hover{
+  opacity:0.6;
+}
 .content{
   width:50vw;
   height:100vh;
@@ -211,73 +235,79 @@ a:visited{
 .textile{
   display:flex;
   justify-content: center;
- /* align-content:center;*/
+  align-content:center;
   flex-wrap:wrap;
-/*  display:table-cell;
-  text-align:center;
-  vertical-align: middle;*/
   font-size:4.5rem;
   letter-spacing:0.1em;
+  background-image:linear-gradient(white,#79604c);
 }
-.content1,.content4,.content5{
-  background-image:linear-gradient(white,skyblue);
-}
-.content2{
-  background-image:url("../images/shomeishiki.jpg");
-  background-size:cover;
-  background-position:center;
-}
-.content3{
-  background-image:url("../images/kichidon.jpg");
-  background-size:cover;
-}
-/*.content4{
-  background-image:linear-gradient(white,gray);
-}
-.content5{
-  background-image:linear-gradient(white,gray);
-}*/
-.content6{
-  background-color:brown;
-  background-image:url("../images/ratphone.jpg");
-  background-size:33.3%;
-  background-position:center;
-}
-h2{
-  /*background-color:pink;*/
-  margin-top:244px;
+.main-menu .textile h2{
+  width:50vw;
+  text-align:center;
+  margin-top:31vh;
   margin-bottom:10px;
   font-size:5rem;
   letter-spacing: 0.8rem;
-  text-shadow:1px 1px 10px skyblue;
+  text-shadow:1px 1px 10px #79604c;
 }
-h3{
+.main-menu .textile h3{
   font-size: 1rem;
-  /*background-color:red;*/
   margin-bottom:200px;
-  text-shadow:1px 1px 5px skyblue;
+  text-shadow:1px 1px 5px #79604c;
 }
-
+.photo{
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+  position:relative;
+} 
+.text-box{
+  width:18vw;
+  height:20vh;
+  padding:10px;
+  margin:0 5vw 5vw 0;
+  background:rgba(256,256,256,0.8);
+  color:#79604c;
+}
+.text-box h3{
+  text-align: right;
+  line-height:5vh;
+  padding-right:10px;
+}
+.photo .bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-1;
+  transition:500ms;
+}
+.photo:hover .bg{
+  -webkit-filter: brightness(50%);
+}
+.content6,.content7 .text-box h3{
+  font-family:HiraMinPro-W6;
+}
 #nav{
   width:100vw;
   height:10vh;
-  background-color:white;
-  color:black;
+  background-color:#79604c;
+  color:#79604c;
   display:flex;
   justify-content: center;
 }
-
 #nav a:visited{
-  color:silver;
+  color:#79604c;
 }
-
 #totop{
-  width:100px;
+  width:10vh;
   height:100%;
+  background-color:white;
+  color:#79604c;
   display:flex;
   justify-content: center;
   align-items:center;
-  box-shadow:0 0 3px black;
+  box-shadow:0 0 3px white;
   text-decoration:none;
 }
 
@@ -285,51 +315,29 @@ h3{
   width:100vw;
   height:30vh;
   background-color: white;
-  box-shadow:0 0 1px 1px black;
-  color:black;
+  color:#79604c;
   text-align:center;
   line-height:30vh;
   letter-spacing: 0.8rem; 
 }
-#footer{
+footer{
   padding-top:10px;
   width:100vw;
   height:10vh;
-  background-image:linear-gradient(to left,skyblue,white);
+  background-image:linear-gradient(to left,silver,white);
   font-size: 0.2rem;
   text-align:center;
   letter-spacing: 1px;
   text-shadow:1px 1px 1px gray;
 }
 
-#mobile-menu{
+.impact img{
   display:none;
 }
-
-/*small*/
-@media (max-width:600px){
-
-#pc-menu{
-  display:none;
-}
-.sasa_tsuna{
-  display:none;
-}
-#mobile-menu{
-  display:flex; 
-  justify-content:space-around;
-  padding-top:5vh;
-}
-
-
-
-}
-
-
 
 
 /*ここからindex.html*/
-#indexmain{
+/*#indexmain{
   position:relative;
   display:inline-block;
   background: white;
@@ -352,9 +360,17 @@ h3{
   position:absolute;
   top:200px;
   left:15vw;
+}*/
+
+/*about.html*/
+/*#headimage2{
+  width:100%;
+  height:100vh;
+  background-image:url("../images/shomeishiki.jpg");
+  background-size:cover;
+  background-position: center;
 }
 
-/*ここからabout.html*/
 #aboutmain{
   background-color:green;
   height:100vh;
@@ -377,9 +393,17 @@ h3{
   background-color:black;
   height:100vh;
   width:100vw;
+}*/
+
+/*project.html*/
+/*#headimage3{
+  width:100%;
+  height:100vh;
+  background-image:url("../images/kichidon.jpg");
+  background-size:cover;
+  background-position: center;
 }
 
-/*ここからproject.html*/
 #projectmain{
   background-color:black;
   height:100vh;
@@ -390,7 +414,16 @@ h3{
   background-color:green;
   height:100vh;
   width:100vw; 
+}*/
+
+
+/*contact.html*/
+
+/*#headimage4{
+  width:100%;
+  height:100vh;
+  background-image:url("../images/ratphone.jpg");
+  background-size:cover;
+  background-position: center;
 }
-
-
-
+*/
